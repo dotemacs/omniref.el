@@ -16,7 +16,7 @@
 ;; M-x omniref - if a region is selected, then that region is searched
 ;; otherwise you'll be prompted for a search term
 
-;; Shout out to Dimitry Fountaine for dim-google.el:
+;; Shout out to Dimitri Fontaine for dim-google.el:
 ;; http://www.emacswiki.org/emacs/dim-google.el from which this code
 ;; borrows
 
