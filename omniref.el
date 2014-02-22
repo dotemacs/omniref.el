@@ -1,4 +1,4 @@
-;; omniref.el --- Omniref Ruby documentation search engine interface
+;;; omniref.el --- Omniref Ruby documentation search engine interface
 
 ;; Filename: omniref.el
 ;; Description: Oniref Ruby documentation search engine interface
@@ -44,6 +44,7 @@
 	(buffer-substring (region-beginning) (region-end))
       (read-string "Search omniref for: " (thing-at-point 'word)))))
 
+;;;###autoload
 (defun omniref (keywords)
   "Search Omniref, Ruby documentation search engine"
   (interactive (region-or-word))
