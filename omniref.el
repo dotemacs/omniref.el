@@ -16,6 +16,10 @@
 ;; M-x omniref - if a region is selected, then that region is searched
 ;; otherwise you'll be prompted for a search term
 
+;; Shout out to Dimitry Fountaine for dim-google.el:
+;; http://www.emacswiki.org/emacs/dim-google.el from which this code
+;; borrows
+
 ;;; Code:
 
 (require 'browse-url)
@@ -32,13 +36,17 @@
   (browse-url
    (concat omniref-url (formatted-search-term term))))
 
-(defun omniref (keywords)
-  "Search Omniref for a word or region"
-  (interactive
+(defun region-or-word ()
+  "Determine what should be searched, a highlighted region of
+   text or a word the cursor is on"
    (list
     (if (use-region-p)
 	(buffer-substring (region-beginning) (region-end))
       (read-string "Search omniref for: " (thing-at-point 'word)))))
+
+(defun omniref (keywords)
+  "Search Omniref, Ruby documentation search engine"
+  (interactive (region-or-word))
   (search-for keywords))
 
 (provide 'omniref)
