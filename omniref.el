@@ -27,16 +27,16 @@
 (defconst omniref-url "http://www.omniref.com/?q="
   "Omniref query URL")
 
-(defun formatted-search-term (terms)
+(defun omniref-formatted-search-term (terms)
   "Format the term for searching"
   (replace-regexp-in-string "[[:space:]]+" "+" terms))
 
-(defun search-for (term)
+(defun omniref-search-for (term)
   "Browse to Omniref with the search term"
   (browse-url
-   (concat omniref-url (formatted-search-term term))))
+   (concat omniref-url (omniref-formatted-search-term term))))
 
-(defun region-or-word ()
+(defun omniref-region-or-word ()
   "Determine what should be searched, a highlighted region of
    text or a word the cursor is on"
    (list
@@ -47,8 +47,8 @@
 ;;;###autoload
 (defun omniref (keywords)
   "Search Omniref, Ruby documentation search engine"
-  (interactive (region-or-word))
-  (search-for keywords))
+  (interactive (omniref-region-or-word))
+  (omniref-search-for keywords))
 
 (provide 'omniref)
 
