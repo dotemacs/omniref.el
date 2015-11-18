@@ -11,7 +11,7 @@
 
 ;; This file in not part of GNU Emacs.
 
-;; Comentary:
+;; Commentary:
 
 ;; M-x omniref - if a region is selected, then that region is searched
 ;; otherwise you'll be prompted for a search term
