@@ -24,7 +24,7 @@
 
 (require 'browse-url)
 
-(defconst omniref-url "http://www.omniref.com/?q="
+(defconst omniref-url "http://docs.omniref.com/?q="
   "Omniref query URL")
 
 (defun omniref-formatted-search-term (terms)
