@@ -5,7 +5,7 @@
 ;; Author: "Aleksandar Simić" <asimic@gmail.com>
 ;; License: BSD
 ;; Created: 2014-02-22 17:22
-;; Version: 1.0.0
+;; Version: 1.0.1
 ;; URL: http://github.org/dotemacs/omniref.el
 ;; Keywords: docs, help, tools
 
