@@ -1,5 +1,10 @@
 # Omniref
 
+> **NOTE:** This package is deprecated,
+> as [Omniref](http://www.omniref.com/)
+> has [gone away](http://500errors.com/omniref/). Leaving it here for
+> reference.
+
 Emacs interface for Ruby documentation search engine
 [http://www.omniref.com/](http://www.omniref.com/)
 
